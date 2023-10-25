@@ -51,12 +51,14 @@ class MyApp extends StatelessWidget {
     );
 
     Color color = Theme.of(context).primaryColor;
+    Color cor2 = Colors.orange;
 
     Widget buttonSection = Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         _buildButtonColumn(color, Icons.call, 'Ligar'),
-        _buildButtonColumn(color, Icons.near_me, 'Rota'),
+        _buildButtonColumn(cor2, Icons.message, 'Mensagem'),
+        _buildButtonColumn(cor2, Icons.local_library, 'Rota'),
         _buildButtonColumn(color, Icons.share, 'Comartilhar'),
       ],
     );
@@ -64,26 +66,28 @@ class MyApp extends StatelessWidget {
     Widget textSection = Container(
       padding: const EdgeInsets.all(32),
       child: const Text(
-        'Após a inauguração da pedra fundamental, em 1949, a Catedral São João Batista começou a ser construída em 1950. A construção neogótica, de localização elevada e privilegiada no centro da cidade, foi concluída em 1957 e forma um conjunto harmonioso com o Colégio Dom Bosco, Praça Ermembergo Pellizzetti e o monumento do Cristo.'
-        'Em seu interior, a Catedral ostenta técnicas construtivas expressivas e singulares, mão-de-obra apurada, nichos que contêm imagens sacras numa proporção estudada e perfeita. Abóbadas, colunas, altar principal imponente decorado em mármore, pinturas nas paredes e teto com variadas luminárias.',
+        'Após a inauguração da pedra fundamental, em 1949, a Catedral São João Batista começou a ser construída em 1950. \nA construção neogótica, de localização elevada e privilegiada no centro da cidade, foi concluída em 1957 e forma um conjunto harmonioso com o Colégio Dom Bosco, Praça Ermembergo Pellizzetti e o monumento do Cristo.'
+        'Em seu interior, a Catedral ostenta técnicas construtivas expressivas e singulares, mão-de-obra apurada, nichos que contêm imagens sacras numa proporção estudada e perfeita. \nAbóbadas, colunas, altar principal imponente decorado em mármore, pinturas nas paredes e teto com variadas luminárias.',
         softWrap: true,
       ),
     );
 
     return MaterialApp(
-      title: 'Flutter layout demo',
+      title: 'Catedral São João Batista',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter layout demo'),
+          title: const Text('Catedral São João Batista'),
         ),
         body: ListView(
           children: [
-            Image.asset(
+            /*Image.asset(
               'images/catedral.jpg',
               width: 600,
               height: 240,
               fit: BoxFit.cover,
-            ),
+            ),*/
+            Image.network(
+                'https://biblioteca.ibge.gov.br/visualizacao/fotografias/GEBIS%20-%20RJ/sc50719.jpg'),
             titleSection,
             buttonSection,
             textSection,
