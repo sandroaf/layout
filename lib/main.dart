@@ -74,6 +74,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       title: 'Flutter layout demo',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Catedral São João Batista'),
