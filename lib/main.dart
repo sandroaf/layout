@@ -73,7 +73,7 @@ class MyApp extends StatelessWidget {
     );
 
     return MaterialApp(
-      title: 'Catedral São João Batista',
+      title: 'Flutter layout demo',
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Catedral São João Batista'),
