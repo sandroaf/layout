@@ -74,7 +74,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       title: 'Flutter layout demo',
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false, //retirar tarjeta de Debug
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Catedral São João Batista'),
